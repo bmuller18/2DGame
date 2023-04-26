@@ -1,14 +1,10 @@
 import time
+import Buildings.my_resources
 
 
 grow = False
 grainTime = 0
 def grain():
-    global grainTime
-    grow = True
-    if grow == True:
-        for i in range(5,0,-1):
-            time.sleep(1)
-        grainTime = grainTime + 1
-        print(grainTime)
-    grow = False
+    time.sleep(2)
+    Buildings.my_resources.grain = Buildings.my_resources.grain + 1
+    print(Buildings.my_resources.grain)
